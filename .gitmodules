@@ -1,0 +1,3 @@
+[submodule "javascript/download"]
+	path = javascript/download
+	url = https://github.com/rndme/download
