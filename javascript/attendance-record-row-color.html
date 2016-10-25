@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Attendance</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style type="text/css">
+    
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+    
+    </style>
+  </head>
+  <body>
+
+<div class="divTable">
+	<div class="divTableBody">
+		<div class="divTableRow">
+			<div class="divTableCell">ID</div>
+			<div class="divTableCell">First Name</div>
+			<div class="divTableCell">Last Name</div>
+			<div class="divTableCell">Percent</div>
+			<div class="divTableCell">Color</div>
+		</div>
+		<div class="divTableRow record">
+			<div class="divTableCell">112233</div>
+			<div class="divTableCell">Bobby</div>
+			<div class="divTableCell">Tables</div>
+			<div id="percentage" class="divTableCell">95%</div>
+			<div class="divTableCell">&nbsp;</div>
+		</div>
+		<div class="divTableRow record">
+			<div class="divTableCell">112234</div>
+			<div class="divTableCell">Timmy</div>
+			<div class="divTableCell">Turner</div>
+			<div id="percentage" class="divTableCell">29%</div>
+			<div class="divTableCell">&nbsp;</div>
+		</div>
+		<div class="divTableRow record">
+			<div class="divTableCell">112235</div>
+			<div class="divTableCell">Beth</div>
+			<div class="divTableCell">Mackenzie</div>
+			<div id="percentage" class="divTableCell">77%</div>
+			<div class="divTableCell">&nbsp;</div>
+		</div>
+		<div class="divTableRow record">
+			<div class="divTableCell">112236</div>
+			<div class="divTableCell">Little</div>
+			<div class="divTableCell">Finger</div>
+			<div id="percentage" class="divTableCell">69%</div>
+			<div class="divTableCell">&nbsp;</div>
+		</div>
+		<div class="divTableRow record">
+			<div class="divTableCell">112237</div>
+			<div class="divTableCell">Dragon</div>
+			<div class="divTableCell">Queen</div>
+			<div id="percentage" class="divTableCell">100%</div>
+			<div class="divTableCell">&nbsp;</div>
+		</div>
+		<div class="divTableRow record">
+			<div class="divTableCell">112238</div>
+			<div class="divTableCell">Tyrian</div>
+			<div class="divTableCell">Lannister</div>
+			<div id="percentage" class="divTableCell">0%</div>
+			<div class="divTableCell">&nbsp;</div>
+		</div>
+	</div>
+</div>
+<!-- DivTable.com -->
+  
+    <script>
+jQuery(function ($) {
+  console.log('script loaded');
+
+  $('.record div:nth-child(4)').each(function() {
+    var attendancePercent = $(this).text().replace(/\D/g,''); //jQuery method
+    if (attendancePercent >= 95) {
+      $(this).css('background-color','#99ff99');
+    } else if (attendancePercent >= 60) {
+      $(this).css('background-color','#ffff99');
+    }else if (attendancePercent <= 59 && attendancePercent >0 ) {
+      $(this).css('background-color','#ff9999');
+    } else {
+      $(this).css('background-color','#99ffff');
+    }
+  });
+});
+    </script>
+  </body>
+</html>
