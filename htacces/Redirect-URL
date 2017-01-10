@@ -1,0 +1,6 @@
+#Redirect any url on your site to another location
+#Useful for shortening links using your own domain
+RewriteCond %{HTTP_HOST} ^mysite\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.mysite\.com$
+RewriteRule ^google\-search$ "http\:\/\/www\.google\.com\/" [R=301,L]
+RewriteRule ^yahoo$ "http\:\/\/www\.yahoo\.com\/" [R=301,L]
