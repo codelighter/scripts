@@ -6,6 +6,7 @@ RewriteRule ^google\-search\/$ "http\:\/\/www\.google\.com\/" [R=301,L]
 RewriteRule ^yahoo\/$ "http\:\/\/www\.yahoo\.com\/" [R=301,L]
 
 #Depending on your server, you can omit escaping with backslashes
+#slug/? also works with or without trailing forward slashes
 RewriteCond %{HTTP_HOST} ^mysite.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www.mysite.com$
-RewriteRule ^google-search/$ "http://www.google.com" [R=301,L]
+RewriteRule ^google-ca/?$ "http://www.google.ca" [R=301,L]
