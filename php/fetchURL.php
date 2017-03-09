@@ -2,7 +2,7 @@
 //START============================================================================================
 // Fetches 'safely' the copyright footer from head office
 // Called by the code line below
-// if(function_exists('fetchURLL')) fetchUrl('http://localhost/yourfile.php');
+// if(function_exists('fetchUrl')) fetchUrl('http://localhost/yourfile.php');
 function checkUrl($uri) {
   $handle = curl_init();
   $options = array(
