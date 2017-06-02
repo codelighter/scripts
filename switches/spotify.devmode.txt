@@ -1,0 +1,3 @@
+./Spotify --enable-developer-mode=1 --show-console=1 --bridge-log-filename="test-bridge.log" --allow-upgrades=1 --remote-debugging-port=8000 --srv=a.spotify.com --trace-file --performance-tracing
+http://127.0.0.1:8000/json
+http://127.0.0.1:8000/devtools/inspector.html?ws=127.0.0.1:8000/devtools/page/a206e111-a0d8-426d-b647-aeddddb4ce62
